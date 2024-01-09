@@ -46,13 +46,10 @@ const [num, setNum] = useState(0)
           setNum(15)
         }}>max</button>
 
-        <button onClick={()=>{
-          if(num < 15)setNum(num + 5)
-        }}>+5</button>
+        <button onClick={() => setNum(Math.min(num + 5, 15))}>+5</button>
 
-        <button onClick={()=>{
-          if(num > -1)setNum(num - 5)
-        }}>-5</button>
+        <button onClick={() => setNum(Math.max(num - 5, 0))}>-5</button>
+        
       </div>
 <br/>
       <img className="donkey" src={
